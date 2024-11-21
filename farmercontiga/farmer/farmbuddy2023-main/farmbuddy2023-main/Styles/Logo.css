@@ -1,0 +1,12 @@
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img.small-logo {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Match height to width to create a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 12px; /* Optional: increase spacing between the image and the text */
+    object-fit: cover; /* Ensures the image fills the circular frame */
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarmBuddy</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="./Styles/style.css" />
+  <link rel="stylesheet" href="../../../cookies.css">
+  <link rel="stylesheet" href="Styles/Logo.css">
+  <link rel="stylesheet" href="Styles/cart.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/team.css">
+</head>
+<body>
+<div id="cookies-popup" class="cookies-popup">
+  <p>This website uses cookies to ensure you get the best experience on our website.</p>
+  <button id="accept-cookies-btn">Accept</button>
+</div>
+<script>
+  function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTimde(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  function getCookie(name) {
+    const keyValue = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  function checkCookiesAccepted() {
+    return getCookie('cookiesAccepted');
+  }
+  function showCookiesPopup() {
+    const cookiesPopup = document.getElementById('cookies-popup');
+    cookiesPopup.style.display = 'block';
+  }
+  function hideCookiesPopup() {
+    const cookiesPopup = document.getElementById('cookies-popup');
+    cookiesPopup.style.display = 'none';
+  }
+  function acceptCookies() {
+    setCookie('cookiesAccepted', 'true', 365);
+    hideCookiesPopup();
+    window.removeEventListener('scroll', handleScrollAccept);
+  }
+  function handleScrollAccept() {
+    acceptCookies();
+  }
+  document.getElementById('accept-cookies-btn').addEventListener('click', acceptCookies);
+  window.addEventListener('load', function() {
+    if (!checkCookiesAccepted()) {
+      showCookiesPopup();
+      window.addEventListener('scroll', handleScrollAccept);
+    }
+  });
+</script>
+</body>
+</html>
+    <div class="spinnerContainer">
+      <div class="spinner"></div>
+      <div class="loader">
+        <p>loading</p>
+        <div class="words">
+          <span class="word">header</span>
+          <span class="word">images</span>
+          <span class="word">products</span>
+          <span class="word">features</span>
+          <span class="word">categories</span>
+        </div>
+      </div>
+    </div>
+
+
+
+<header class="header">
+  <a href="#" class="logo">
+    <img src="Assets/logo mark up.jpg" alt="RE:BARDING CUSTOMIZE GLASS" class="small-logo">
+    RE:BARDING CUSTOMIZE GLASS
+  </a>
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#features">features</a>
+    <a href="#categories">categories</a>
+    <a href="#products">products</a>
+    <a href="#learn">Learn</a>
+    <a href="#about">Team</a>
+    <a class="sin" href="./Sign-in/Index.html">Sign in/up</a>
+  </nav>
+  <div class="icons">
+    <div class="fas fa-bars" id="menu-btn"></div>
+    <div class="fas fa-search" style="display: none" id="search-btn"></div>
+    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    <div class="fas fa-user" id="login-btn"></div>
+  </div>
+</header>
+
+
+    <div id="lod">
+      <section class="home" id="home">
+        <div class="content">
+          <h3><span>Re</span> and  <span>organic</span> products for you</h3>
+          <p>From our Farm to your Home without any intermediaries</p>
+          <a href="#products" class="btn">shop now</a>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <h1 class="heading">our <span>features</span></h1>
+        <div class="box-container">
+          <div class="box">
+            <img
+              src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+            <h3>fresh and organic</h3>
+            <p>Here,we sell all the fresh and organic products</p>
+          </div>
+          <div class="box">
+            <img
+              src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+            <h3>JECEL PIT</h3>
+            <p>All the organic products to your doorstep</p>
+          </div>
+          <div class="box">
+            <img
+              src="../../../../Our featurs-Product-cate-visit/waste-glass-bottle-recycle.jpg"
+              alt=""
+            />
+            <h3>Plant Disease Detection</h3>
+            <p>here, at farmBuddy disease detection made easy</p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="categories" id="categories">
+        <h1 class="heading">product <span>categories</span></h1>
+        <div class="box-container">
+          <div class="box">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1663926032113-cc8eee2268e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG9yZ2FuaWMlMjB2ZWdnaWVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+            <h3>vegetables</h3>
+            <p>organically harvested veggies</p>
+          </div>
+          <div class="box">
+            <img
+              src="https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlc2glMjBmcnVpdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+            <h3>fresh fruits</h3>
+            <p>naturally produced fruits</p>
+          </div>
+
+          <div class="box">
+            <img
+              src="https://images.pexels.com/photos/4207908/pexels-photo-4207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <h3>Modern Customization on
+              your Glass</h3>
+            <p>Promoting Customize Glass reduce the amout of glass waste sent to landfills by transformative discarded glass bootles into functional,
+              sustainable, and aesthetically. We aspire to contribute to a circular economy and greener, more sustainable future.</p>
+          </div>
+        </div>
+      </section>
+      <section class="products" id="products">
+        <h1 class="heading">our <span>products</span></h1>
+        <div class="swiper product-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1664114727339-a710cdbc5455?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFybXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                alt=""
+              />
+              <h3>orange</h3>
+              <div class="price"></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide box">
+              <img
+                src="https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b25pb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                alt=""
+              />
+              <h3>onion</h3>
+              <div class="price"></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="swiper-slide box">
+              <h3 font-size="20">
+                <br />
+                <br />for<br />
+                more<br />
+                products
+              </h3>
+              <br />
+              <br />
+              <a href="./Cart" class="btn btn-cart-down">click here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="learn" id="learn">
+        <div class="our-team-section">
+          <h2>Meet Our Team</h2>
+          <div class="team-members">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/Ricky Laylano Contiga.jpg" alt="Ricky Contiga">
+              <h3>Ricky Contiga</h3>
+              <p>Chairman</p>
+              <p>"He is a chairman of our company and also an IT expert.
+                His passion for design and innovation drives our mission
+                to provide unique glass solutions.."</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/Jecel Pit .jpg" alt="Jecel Pit">
+              <h3>Jecel Pit</h3>
+              <p>Chief Executive Officer</p>
+              <p>"Jecel is the one who leads the creativity behind our customized designs.
+                Her expertise ensures every project meets and exceeds client expectations."</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/Rhaine Heart Tangpos .jpg" alt="Rhane Heart Tangpos">
+              <h3>Rhane Heart Tangpos</h3>
+              <p> CHIEF DATA OFFICER</p>
+              <p>"Rhane oversees data management and analytics to support informed decision-making across the company."</p>
+            </div>
+
+            <!-- Team Member 4 -->
+
+
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/Hazel Mae Pantalita .jpg" alt="Hazel Mae Pantalita">
+              <h3>Hazel Mae Pantalita</h3>
+              <p>Chief Financial Officer</p>
+              <p>"Hazel manages the company’s financial operations, ensuring sustainable growth and stability."</p>
+            </div>
+
+            <!-- Team Member 5 -->
+
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/Katrina Balitor.jpg" alt="Katrina Balitor">
+              <h3>Katrina Balitor</h3>
+              <p> COO</p>
+              <p>"katrina ensures smooth operations and is focused on optimizing our processes and customer satisfaction."</p>
+            </div>
+
+            <!-- Team Member 6 -->
+
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/Jahzel Segura.png" alt="Jahzel Segura">
+              <h3>Jahzel Segura</h3>
+              <p>CUSTOMER SERVICES MANAGER / IT</p>
+              <p>"jahzel is dedicated to creating a work environment that fosters growth and inclusivity.."</p>
+            </div>
+
+            <!-- Team Member 7 -->
+
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/ivan.jpg" alt="Ivan A. Cifra">
+              <h3>Ivan A. Cifra </h3>
+              <p>IT EXPERT</p>
+              <p>"Ivan secures the data of our clients with precision and care, playing a vital role in our commitment to excellence."</p>
+            </div>
+
+            <!-- Team Member 8 -->
+
+            <div class="team-member">
+              <img src="assets/icons/assets/images/Team/JUNAZ.jpg" alt="Junaz Cairel">
+              <h3>Junaz Cairel</h3>
+              <p>SALES MANAGER</p>
+              <p>"Junaz creates innovative designs that keep us at the cutting edge of industry trends.d."</p>
+            </div>
+
+            <!-- Team Member 9 -->
+            <div class="team-member">
+              <img src="path/to/photo9.jpg" alt="Gryzel Joy Cinco">
+              <h3>Gryzel Joy Cinco</h3>
+              <p> FINANCIAL REPORTING MANAGER</p>
+              <p>"Gryzel Joy leads the marketing team, ensuring our brand reaches new heights and resonates with our audience.."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
